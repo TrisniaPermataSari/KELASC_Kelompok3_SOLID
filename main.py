@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
 
 class Hewan(ABC):
-    def __init__(self, nama):
+    def __init__(self, nama, jenis):
         self.nama = nama
-
+        self.jenis = jenis
+        
     @abstractmethod
     def makan(self):
         pass
@@ -11,6 +12,10 @@ class Hewan(ABC):
 class HewanTerbang(Hewan):
     def terbang(self):
         print(f"{self.nama} sedang terbang.")
+
+class Burung(HewanTerbang):
+    def makan(self):
+        print(f"{self.nama} sedang makan.")
 
 class Kandang:
     def __init__(self):
@@ -32,6 +37,12 @@ class KebunBinatang:
 
             if isinstance(hewan, HewanTerbang):
                 hewan.terbang()
+
+kandang = Kandang()
+
+burung = Burung("Merpati", "Burung")
+
+kandang.tambah_hewan(burung)
 
 kandang = Kandang()
 zoo = KebunBinatang(kandang)
