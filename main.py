@@ -1,10 +1,12 @@
-class Hewan:
-    def __init__(self, nama, jenis):
-        self.nama = nama
-        self.jenis = jenis
+from abc import ABC, abstractmethod
 
+class Hewan(ABC):
+    def __init__(self, nama):
+        self.nama = nama
+
+    @abstractmethod
     def makan(self):
-        print(f"{self.nama} sedang makan.")
+        pass
 
 class HewanTerbang(Hewan):
     def terbang(self):
