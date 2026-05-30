@@ -29,7 +29,7 @@ class Kandang:
 
 class KebunBinatang:
     def __init__(self, kandang):
-        self.kandang = Kandang()
+        self.kandang = kandang
 
     def rawat_semua_hewan(self):
         for hewan in self.kandang.hewan_list:
