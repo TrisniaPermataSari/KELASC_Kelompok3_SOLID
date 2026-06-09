@@ -1,4 +1,4 @@
-from hewan import HewanTerbang
+from Hewan import HewanTerbang
 
 class KebunBinatang:
     def __init__(self, kandang):
